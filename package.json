@@ -1,0 +1,23 @@
+{
+  "name": "cypresso",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MevlutOrcan/Cypresso.git"
+  },
+  "author": "Mevlut",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MevlutOrcan/Cypresso/issues"
+  },
+  "homepage": "https://github.com/MevlutOrcan/Cypresso#readme",
+  "devDependencies": {
+    "@cypress/xpath": "^2.0.3",
+    "cypress": "^12.3.0"
+  }
+}
