@@ -1,17 +1,12 @@
 /// <reference types="cypress"/>
-describe('',()=>{
+describe('Suggested Elements',()=>{
     
-    it('',()=>{
+    it('Test Case',()=>{
+        cy.visit('/');
+       
+        cy.get('.gLFyf').type('dress');
+        cy.get('[class="erkvQe"]').contains('dress code').click();
+        cy.wait(2000);
+        cy.get("#result-stats").contains('result').should('be.visible');
 
-
-
-    })
-      
-    it('',()=>{
-
-
-
-    })
-
-
-})
+    }) })
