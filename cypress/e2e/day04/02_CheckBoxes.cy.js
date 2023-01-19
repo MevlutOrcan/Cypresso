@@ -47,16 +47,25 @@ describe('Check Boxes',()=>{
         
             })
         
-    it('All Checkboxes 2',()=>{
+    it.only('All Checkboxes 2',()=>{
 
         cy.visit('https://the-internet.herokuapp.com/checkboxes');
                 
                 
-        cy.get('input[type="checkbox"]').click({ multiple: true });
+        cy.get('input[type="checkbox"]').eq(0).click({ multiple: true });
+        cy.get('input[type="checkbox"]').eq(0).should('have.attr','checked');
+         // burasi 'checked' attributune sahip olmali
+
+        cy.get('input[type="checkbox"]').should('have.attr','checked'); 
+        // locator u 'input[type="checkbox]' olan tum hepsi 'checked' attributune sahip olmali
+
+
+        //cy.get('input[type="checkbox"]').eq(0).should('have.class','checked'); 
+        // burasi 'checked' class ina sahip olmali
                 
                     })
                 
-    it.only('All CheckBoxes 2 Amazon', () => {
+    it('All CheckBoxes 2 Amazon', () => {
         cy.visit('https://www.amazon.com')
         cy.get('[href="/gp/goldbox?ref_=nav_cs_gb"]').click();
         //5. kutuya tikla
@@ -74,6 +83,7 @@ describe('Check Boxes',()=>{
         cy.get('input[type="checkbox"]').eq(5).uncheck().should('not.be.checked');
         // unchecked() -->> tiklamalari kaldirir
         // .should('not.be.checked'); tikli olmadigini dogrular
+    
 
 
        })
