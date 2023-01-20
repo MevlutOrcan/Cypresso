@@ -23,3 +23,21 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+
+Cypress.Commands.add('hubcomfyLogin',(email,password)=>{
+    cy.visit('https://hubcomfy.com/my-account-2/');
+    cy.get('#username').type(email);
+    cy.get('#password').type(password);
+    cy.get('#signin > .woocommerce-form > .woocommerce-button').click()
+
+});
+
+// Amazon Arama
+Cypress.Commands.add('amazonSearch',(productName) => {
+
+    cy.visit('https://amazon.com/');
+    cy.get('#twotabsearchtextbox').type(productName);
+    cy.get('#nav-search-submit-button').click()
+
+})
