@@ -17,6 +17,7 @@
 import './commands'
 import 'cypress-iframe';
 
+
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 require('@cypress/xpath');
@@ -24,3 +25,6 @@ require('@cypress/xpath');
 
 require('@4tw/cypress-drag-drop');
 //import '@4tw/cypress-drag-drop'      -->>ES syntax
+
+import 'cypress-file-upload';  // -->> fila Upload
+require('@faker-js/faker')

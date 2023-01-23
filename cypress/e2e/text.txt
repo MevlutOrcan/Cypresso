@@ -1,0 +1,11 @@
+*****
+terminale npx cypress run komutu yazinca tum klasorlerdeki testleri calistirip
+fail pass verenleri tek tek yazdiriyor.Ayrica her testin videosunu aliyor.
+Ayrica hata aldigi testlerin de screenshot unu aliyor
+
+*****
+npx cypress info
+- cypress run --browser chrome
+- cypress run --browser firefox
+
+*****
