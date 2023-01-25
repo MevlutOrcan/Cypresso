@@ -6,13 +6,16 @@ class LoginPage{
     }
     getPasswordBox(){
         return cy.get(':nth-child(2) > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input')
-        .type(this.data.password)
+        
     }
     getLoginButton(){
         return cy.get('.MuiButton-label');
     }
     getWelcomeText(){
         return cy.get('.header__nav > :nth-child(1) > .header__lineOne');
+    }
+    getHeader(){
+        return cy.get('.header__nav')//return cy.get('.header__link')
     }
 
 }

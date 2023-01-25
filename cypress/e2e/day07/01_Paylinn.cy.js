@@ -26,7 +26,7 @@ describe('PayLinnBank',()=>{
         loginPage.getUserNameBox().type(this.data.username);
         
         //cy.get(':nth-child(2) > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input').type(this.data.password)
-        loginPage.getPasswordBox()
+        loginPage.getPasswordBox().type(this.data.password)
 
         //cy.get('.MuiButton-label').click();
         loginPage.getLoginButton().click();
@@ -34,6 +34,11 @@ describe('PayLinnBank',()=>{
 
         //cy.get('.header__nav > :nth-child(1) > .header__lineOne').should('have.text','Welcome');
         loginPage.getWelcomeText().should('have.text','Welcome');
+
+        loginPage.getHeader().should('contain.text','Welcome')
+                                .and('contain.text','Logout');
+        //ayni locate ait webelementleri and() ekleyerek toplu dogrulama yapabiliriz.
+        //LoginPage de tanimladigimiz getHeader() methodunda oratk tek bir locate aldik ve bununla toplu dogrulama yaptik.
 
 
     })
