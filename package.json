@@ -6,8 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "cy:run_day02": "npx cypress run --spec 'cypress/e2e/day02/' --browser chrome",
-    "mycode": "npx cypress run --spec 'cypress/e2e/day02/' --browser chrome --headed"
-  },
+    "mycode": "npx cypress run --spec 'cypress/e2e/day02/' --browser chrome --headed",
+    "test-dashboard" : "npx cypress run --record --key 293c6f7a-00a4-4d87-9fa2-ede9e24d1ea4",
+    "dashboard_day02" : "npx cypress run --spec 'cypress/e2e/day02/' --record --key 293c6f7a-00a4-4d87-9fa2-ede9e24d1ea4"
+    },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/MevlutOrcan/Cypresso.git"
